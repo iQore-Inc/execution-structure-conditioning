@@ -1,0 +1,101 @@
+{
+  "schema_name": "iqore.execution-structure-conditioning.run-metadata",
+  "schema_version": "1.0.0",
+
+  "test_case": "10Q-CBP",
+  "variant": "baseline",
+
+  "run_id": "d3nf1603qtks738eack0",
+
+  "timestamp": {
+    "reported_local": "2025-10-14 19:56:36",
+    "timezone": "America/Chicago",
+    "source": "analysis_report"
+  },
+
+  "backend": {
+    "provider": "IBM Quantum",
+    "backend_name": "ibm_fez",
+    "backend_type": "hardware",
+    "calibration_summary": {
+      "avg_t1_us": 151.60,
+      "avg_t2_us": 109.85,
+      "avg_readout_error_percent": 1.9,
+      "source": "analysis_report"
+    }
+  },
+
+  "circuit": {
+    "logical_family": "GHZ",
+    "qubit_count": 10,
+    "qubits_used": "Q0–Q09",
+    "qasm": {
+      "repo_root_path": "qasm/10Q-CBP/10Q-CBP - QASM - Baseline (d3nf1603qtks738eack0).qasm",
+      "relative_path_from_this_file": "../../../qasm/10Q-CBP/10Q-CBP - QASM - Baseline (d3nf1603qtks738eack0).qasm",
+      "openqasm_version": "2.0",
+      "sha256": null,
+      "sha256_status": "E936EDD4D4C9467DEEAAC2D94FDC84539FDB29309A9793E97CA8457A0E3AF68F"
+    }
+  },
+
+  "execution": {
+    "shots_reported": 2000,
+    "shots_verified_from_counts_csv": 2000,
+    "shots_verified_from_shot_order_csv": 2000,
+    "job_ids": ["d3nf1603qtks738eack0"],
+    "transpiler_tier_reported": "L3",
+    "source": "analysis_report"
+  },
+
+  "compiled_circuit_metrics": {
+    "depth": 44,
+    "total_gate_count": 102,
+    "single_qubit_gates": 37,
+    "two_qubit_gates": 17,
+    "source": "analysis_report"
+  },
+
+  "artifacts": {
+    "counts_csv": {
+      "filename": "counts.csv",
+      "original_upload_filename": "10Q-CBP - Shot Count - Baseline (d3nf1603qtks738eack0).csv",
+      "format": "csv",
+      "sha256": "F7A40C28662F1F600D04882E761A962C764225F709BD7B4D29217DACC4FE6388",
+      "sha256_status": "LOCKED: matches published SHA-256 list (CHECKSUMS.sha256)",
+      "schema": {
+        "columns": ["Bitstring", "Count"],
+        "bitstring_width_bits": 10,
+        "notes": "Bitstrings are stored as quoted strings in the source CSV."
+      }
+    },
+    "shot_order_csv": {
+      "filename": "shot_order.csv",
+      "original_upload_filename": "10Q-CBP - Shot Order - Baseline (d3nf1603qtks738eack0).csv",
+      "format": "csv",
+      "sha256": "B80D13F4AF5C0F57E34217C7A0743BCD78F278366407016C7EB68A815F2AE422",
+      "sha256_status": "LOCKED: matches published SHA-256 list (CHECKSUMS.sha256)",
+      "schema": {
+        "columns": ["shot", "bitstring"],
+        "bitstring_width_bits": 10
+      }
+    },
+    "analysis_report_pdf": {
+      "filename": "analysis_report.pdf",
+      "original_upload_filename": "10Q-CBP -  Analysis - CEO Report.pdf",
+      "sha256": "4969D7AF18767F8547A8EDA12E19F029DFD7919FBA6068E6A27030A4652780FC",
+      "sha256_status": "LOCKED"
+    },
+    "metadata_json": {
+      "filename": "metadata.json",
+      "sha256": null,
+      "sha256_status": "SEE /checksum"
+    }
+  },
+
+  "interpretation_boundary": {
+    "post_selection": "none_reported",
+    "readout_mitigation": "none_reported",
+    "filtering": "none_reported",
+    "statement": "This metadata record captures execution provenance and file integrity only; interpretive and comparative claims are confined to the associated analysis report."
+  }
+}

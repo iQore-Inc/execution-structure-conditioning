@@ -1,0 +1,86 @@
+{
+  "schema_name": "iqore.execution-structure-conditioning.run-metadata",
+  "schema_version": "1.0.0",
+
+  "test_case": "10Q-CBP",
+  "variant": "ideal-aer",
+
+  "run_id": "aer-ideal-10q-cbp",
+
+  "timestamp": {
+    "reported_local": "2025-10-14 19:56:36",
+    "timezone": "America/Chicago",
+    "source": "analysis_report"
+  },
+
+  "backend": {
+    "provider": "Qiskit Aer",
+    "backend_name": "aer_simulator",
+    "backend_type": "simulator",
+    "simulation_model": "statevector_ideal",
+    "noise_model": "none",
+    "calibration_summary": {
+      "avg_t1_us": null,
+      "avg_t2_us": null,
+      "avg_readout_error_percent": 0.0,
+      "source": "not_applicable"
+    }
+  },
+
+  "circuit": {
+    "logical_family": "GHZ",
+    "qubit_count": 10,
+    "qubits_used": "Q0–Q09"
+  },
+
+  "execution": {
+    "shots_reported": 2000,
+    "shots_verified_from_counts_csv": 2000,
+    "shots_verified_from_shot_order_csv": null,
+    "job_ids": ["aer-ideal"],
+    "transpiler_tier_reported": "L3",
+    "execution_mode": "ideal_statevector_sampling",
+    "source": "analysis_report"
+  },
+
+  "compiled_circuit_metrics": {
+    "depth": 44,
+    "total_gate_count": 102,
+    "single_qubit_gates": 37,
+    "two_qubit_gates": 17,
+    "source": "analysis_report"
+  },
+
+  "artifacts": {
+    "counts_csv": {
+      "filename": "counts.csv",
+      "original_upload_filename": "10Q-CBP -  Shot Count - Ideal (AER).csv",
+      "format": "csv",
+      "sha256": "B980DD3EB5E0236075D49B42D43284A4B27FA49C7085B9861C85358D99DDEB34",
+      "sha256_status": "LOCKED: matches published SHA-256 list (CHECKSUMS.sha256)",
+      "schema": {
+        "columns": ["Bitstring", "Count"],
+        "bitstring_width_bits": 10,
+        "notes": "Counts obtained from ideal (noise-free) simulator sampling."
+      }
+    },
+    "analysis_report_pdf": {
+      "filename": "analysis_report.pdf",
+      "original_upload_filename": "10Q-CBP -  Analysis - CEO Report.pdf",
+      "sha256": "4969D7AF18767F8547A8EDA12E19F029DFD7919FBA6068E6A27030A4652780FC",
+      "sha256_status": "LOCKED"
+    },
+    "metadata_json": {
+      "filename": "metadata.json",
+      "sha256": null,
+      "sha256_status": "SEE /checksum"
+    }
+  },
+
+  "interpretation_boundary": {
+    "post_selection": "not_applicable",
+    "readout_mitigation": "not_applicable",
+    "filtering": "none",
+    "statement": "This execution represents an ideal, noise-free AER simulator reference. Results are used exclusively as a theoretical benchmark for divergence and fidelity comparisons; no hardware effects, calibration data, or physical noise processes are present."
+  }
+}

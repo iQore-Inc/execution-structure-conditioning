@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+
+title: "Execution-Structure Conditioning in Quantum Systems"
+
+message: >
+  If you use this repository in academic work, please cite the accompanying paper.
+  This repository contains the OpenQASM circuit artifacts, raw measurement data,
+  and derived analysis materials required to reproduce the reported results.
+
+type: software
+
+authors:
+  - family-names: Null
+    given-names: Sean W.
+    affiliation: "iQore Inc., Kansas City, MO, USA"
+  - family-names: Baleta
+    given-names: Dennis O.
+    affiliation: "iQore Inc., Kansas City, MO, USA"
+
+date-released: 2026-02-09
+
+url: "https://github.com/iQore-Inc/execution-structure-conditioning"
+repository-code: "https://github.com/iQore-Inc/execution-structure-conditioning"
+
+abstract: >
+  Companion repository for “Execution-Structure Conditioning in Quantum Systems.”
+  Provides fixed OpenQASM circuit specifications (baseline and execution-conditioned),
+  raw hardware measurement outcomes and reference distributions, and derived analysis
+  artifacts used to compute all reported distribution-level metrics. The materials
+  support independent verification, reproducible re-analysis from raw bitstring counts,
+  and execution-provenance auditability.
+
+keywords:
+  - quantum computing
+  - superconducting qubits
+  - OpenQASM
+  - GHZ
+  - benchmarking
+  - execution context
+  - reproducibility
+  - distributional metrics
+  - leakage geometry
+
+license: "CC-BY-4.0 AND CC0-1.0 AND Apache-2.0"
+
+preferred-citation:
+  type: report
+  title: "Execution-Structure Conditioning in Quantum Systems"
+  authors:
+    - family-names: Null
+      given-names: Sean W.
+      affiliation: "iQore Inc., Kansas City, MO, USA"
+    - family-names: Baleta
+      given-names: Dennis O.
+      affiliation: "iQore Inc., Kansas City, MO, USA"
+  institution: "iQore Inc."
+  date: 2026-02-09
+  url: "https://github.com/iQore-Inc/execution-structure-conditioning"
