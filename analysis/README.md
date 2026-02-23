@@ -40,6 +40,7 @@ All methodological context is described in `/docs` and the associated publicatio
 
 analysis/
     README.md
+    esc_analyze.py
     logical_unitary_equivalence.py
     mass_composition.py
     ghz_geometry.py
@@ -63,7 +64,43 @@ Consistency across directories is required for traceability.
 
 # Script Overview
 
-## 1. Logical Unitary Equivalence Verification
+## 1. Deterministic Statistical Verification (ESC Analysis)
+
+**File:** `esc_analyze.py`
+
+### Purpose
+
+Reproduces the full statistical analysis reported in the paper using only:
+    Shot-order bitstring logs (CSV)
+    Released OpenQASM files (for burden metrics only)
+
+This script verifies empirical probability structure, divergence metrics, bootstrap confidence intervals, shell-space geometry, and execution-structure conditioning (ESC) metrics.
+
+It does not certify circuit equivalence (handled by Script 2)
+
+### Script Output
+
+- esc_full_analysis.csv
+- esc_full_analysis.json
+
+Outputs include:
+
+- Point estimates
+- Bootstrap CIs
+- Bootstrap standard errors
+- PCA summaries
+- Δv eigenspectrum fractions
+- SHA256 hashes of inputs and key outputs
+
+All outputs are deterministic for fixed seed and B.
+
+### Execution
+
+python analysis/esc_analyze.py --analyze 15Q-MAIN
+python analysis/esc_analyze.py --analyze 20Q-SBP --B 50000 --seed 2026
+python analysis/esc_analyze.py --all --hash
+
+## 2. Logical Unitary Equivalence Verification
 
 **File:** `logical_unitary_equivalence.py`
 
@@ -103,7 +140,7 @@ This script is purely symbolic and deterministic.
 
 ---
 
-## 2. Distance-Binned Probability Mass Composition
+## 3. Distance-Binned Probability Mass Composition
 
 **File:** `mass_composition.py`
 
@@ -144,7 +181,7 @@ All layout, typography, and ordering rules are fixed to ensure reproducibility.
 
 ---
 
-## 3. GHZ Manifold Distance Geometry
+## 4. GHZ Manifold Distance Geometry
 
 **File:** `ghz_geometry.py`
 
@@ -234,3 +271,4 @@ This directory contains the deterministic analytical layer connecting released a
 All analysis scripts in this directory are licensed under the Apache License, Version 2.0.
 
 See the repository root for full license terms.
+
